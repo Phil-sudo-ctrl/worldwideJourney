@@ -1,3 +1,18 @@
 .background_home {
     background-image: url('./images/background_home.jpg');
 }
+.description_titles {
+    font-size: 30px;
+    font-weight: 600;
+    color: #ffffff;
+}
+.description_text {
+    color: #ffffff;
+    width: 20%;
+    padding-top: 30px;
+}
+.book_button {
+    color: #ffffff;
+    background-color: #3ac194cd;
+    margin-top: 30px;
+}

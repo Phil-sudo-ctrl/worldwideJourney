@@ -1,0 +1,23 @@
+.about_title {
+    font-size: 50px;
+    font-weight: 600;
+    color: #ffffff;
+}
+.description_text {
+    color: #ffffff;
+    width: 85%;
+    padding-top: 30px;
+}
+.our_team_text {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+div ul {
+    display: flex;
+    list-style: none;
+    color: #ffffff;
+}
+div ul li {
+    margin-left: 100px;
+}
