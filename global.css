@@ -5,6 +5,7 @@ body {
     margin: 0;
     box-sizing: border-box;
     height: 100%;
+    background-color: #2A7B9B;
 }
 nav {
     background: #2A7B9B;
@@ -56,9 +57,37 @@ nav ul li button {
     height: 100%;
 }
 .page_content {
-    padding-top: 10%;
+    padding-top: 2%;
     padding-left: 10%;
 }
 .background_general {
     background-image: url('./images/background_home.jpg');
+}
+
+#searchResult {
+    justify-self: flex-end;
+    width: 100%;
+    height: 70%;
+    margin-right: 50px;
+    background-color: #3ac194cd;
+    padding: 5px;
+}
+.result_image {
+    width: 100%;
+}
+.result_text {
+    background-color: #ffffff;
+}
+.result_title {
+    font-size: 20px;
+    font-weight: 300;
+}
+.result_button {
+    background-color: #379b79cd;
+}
+.display_none{
+    display: none;
+}
+.display_true{
+    display: inherit;
 }

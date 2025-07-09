@@ -1,3 +1,8 @@
+const searchText = document.getElementById('searchBar');
+const searchButton = document.getElementById('searchButton');
+
+let jsonData;
+
 const api = fetch('./travel_recommendation_api.json', {
     method: 'GET',
     headers: {
@@ -5,14 +10,44 @@ const api = fetch('./travel_recommendation_api.json', {
     },
 })
    .then(response => response.json())
-   .then(response => console.log(JSON.stringify(response)));
+   .then(function(response){jsonData = response});
 
-function capitalize(word) {
-    return String(word).charAt(0).toUpperCase() + String(word).slice(1);
+function lowercase(word) {
+    return String(word).toLowerCase();
+}
+function addTrailingS(word){
+    let newWord;
+    if (String(word).charAt(String(word).length - 1) === 's'){
+        newWord = word;
+    } else {
+        if(String(word).charAt(String(word).length - 1) === 'y'){
+            newWord = String(word).slice(0, String(word).length - 1) + "ies"
+        } else {
+            if(String(word).charAt(String(word).length - 1) === 'e'){
+                newWord = word + 's';
+            } else {
+                newWord = word + 'es';
+            }
+        }
+    }
+    return newWord;
 }
 
 function trySearching(keyword) {
-    let unifiedKeyword = capitalize(String(keyword).toLowerCase());
-    let i = 0;
-    //while i < 
+    let unifiedKeyword = addTrailingS(lowercase(keyword));
+    let response;
+    Object.entries(jsonData).forEach(([key, value]) => {
+        if(unifiedKeyword == key){
+            response = value;
+        }
+    })
+    if(response == null){
+        response = "no such keyword found";
+    }
+    return response;
 }
+function search(){
+    console.log(trySearching(searchText.value))
+}
+
+searchButton.addEventListener('click', search);
