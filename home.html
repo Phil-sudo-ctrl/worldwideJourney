@@ -19,8 +19,8 @@
             </ul>
             <ul id="search_bar">    
                 <li><input type="text" id="searchBar" placeholder="Search..."></li>
-                <li><button id="buttonSearch">Search</button></li>
-                <li><button id="resetSearch">Reset</button></li>
+                <li><button id="searchButton">Search</button></li>
+                <li><button id="resetButton">Reset</button></li>
             </ul>
         </nav>
         <div class="page background_image background_home">
@@ -34,16 +34,16 @@
                     <div class="description_text">
                         It encourages exploration of unfamiliar territories, embracing diverse cultures and landscapes, while pursuing the desired destination that captivates the heart and ignites a sense of wonder.
                     </div>
-                    <input type="button" class="book_button" onclick="location.href='./travel_recommendation.html';" value="Book now and here" />
+                    <input type="button" class="book_button" value="Book now" />
                 </div>
-                <div id="searchResult">
-                    <div class="result_box" id="result0">
-                        <img class="result_image" src="./images/sample.jpg" />
+                <div id="searchResult" class="display_none">
+                    <div class="result_box" id="result_0">
+                        <img class="result_image" src="./images/sample_0.jpg" />
                         <div class="result_text">
-                            <div class="result_title">
+                            <div class="result_title" id="result_title_0">
                                 Sample_title
                             </div>
-                            <div class="result_description">
+                            <div class="result_description" id="result_description_0">
                                 This is a wonderful place. Full of live and wonder. Haven't been there but hear amazing stuff.
                             </div>
                             <button class="result_button">
@@ -51,13 +51,13 @@
                             </button>
                         </div>
                     </div>
-                    <div class="result_box" id="result1">
-                        <img class="result_image" src="./images/sample.jpg" />
+                    <div class="result_box" id="result_1">
+                        <img class="result_image" src="./images/sample_1.jpeg" />
                         <div class="result_text">
-                            <div class="result_title">
+                            <div class="result_title" id="result_title_1">
                                 Sample_title
                             </div>
-                            <div class="result_description">
+                            <div class="result_description" id="result_description_1">
                                 This is a wonderful place. Full of live and wonder. Haven't been there but hear amazing stuff.
                             </div>
                             <button class="result_button">
@@ -68,5 +68,6 @@
                 </div>
             </div>
         </div>
+        <script src="./travel_recommendation.js"></script>
     </body>
 </html>
